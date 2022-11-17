@@ -1,4 +1,4 @@
-import { useLayoutEffect } from 'react';
+import { useLayoutEffect, useContext } from 'react';
 import { View, Text, Image, StyleSheet, ScrollView } from 'react-native';
 
 import IconButton from '../components/IconButton';
@@ -8,6 +8,8 @@ import MealDetails from '../components/MealDetails';
 import { MEALS } from '../data/dummy-data';
 
 function MealDetailScreen({ route, navigation }) {
+  const favoriteMealsCtx = useContext();
+
   const mealId = route.params.mealId;
 
   const selectedMeal = MEALS.find((meal) => meal.id === mealId);
