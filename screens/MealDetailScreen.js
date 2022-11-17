@@ -22,7 +22,7 @@ function MealDetailScreen({ route, navigation }) {
     } else {
       favoriteMealsCtx.addFavorite(mealId);
   }
-  }
+  } 
 
   useLayoutEffect(() => {
     navigation.setOptions({
